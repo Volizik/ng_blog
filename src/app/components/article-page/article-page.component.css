@@ -1,0 +1,41 @@
+.title {
+    font-size: 60px;
+}
+mat-card {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.img-title {
+    height: 300px;
+    width: calc(100% + 48px);
+    object-fit: cover;
+}
+.subtitle {
+    font-size: 20px;
+}
+.text {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .title {
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    mat-card {
+        margin: 0 15px;
+        width: calc(100% - 30px);
+    }
+ }
+ @media screen and (max-width: 800px) {
+    .title {
+       font-size: 30px;
+    }
+ }
+ @media screen and (max-width: 600px) {
+    .img-title {
+        height: 160px;
+        width: calc(100% + 32px);
+    }
+ }

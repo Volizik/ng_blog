@@ -1,0 +1,17 @@
+.content {
+    width: 100%;
+}
+h2 {
+    font-size: 60px;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 800px) {
+   h2 {
+       display: none;
+   }
+   .content {
+       margin-top: 20px;
+    }
+}
