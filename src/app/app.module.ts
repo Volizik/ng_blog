@@ -11,6 +11,11 @@ import { ArticleListComponent } from './components/article-list/article-list.com
 import { ArticleComponent } from './components/article/article.component';
 import { AboutComponent } from './components/about/about.component';
 import { MaterialModule } from './material.module';
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { DataService } from './core/data.service';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 
 @NgModule({
@@ -26,9 +31,12 @@ import { MaterialModule } from './material.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    AngularFireModule.initializeApp(environment.fireconfig),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
