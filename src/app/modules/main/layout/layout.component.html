@@ -1,0 +1,33 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="over">
+    <mat-nav-list>
+      <mat-list-item>
+        <a matLine routerLink="/" (click)="sidenav.toggle()">Main page</a>
+        <mat-icon>info</mat-icon>
+      </mat-list-item>
+      <mat-list-item>
+        <a matLine routerLink="/todo" (click)="sidenav.toggle()">To do list</a>
+        <mat-icon>info</mat-icon>
+      </mat-list-item>
+      <mat-list-item>
+        <a matLine routerLink="/library" (click)="sidenav.toggle()">Library</a>
+        <mat-icon>info</mat-icon>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <header class="header">
+      <button mat-icon-button (click)="sidenav.toggle()"><i class="material-icons">menu</i></button>
+    </header>
+
+    <main class="container">
+      <ng-content></ng-content>
+    </main>
+
+    <footer>
+      <span>Design by Kizilov</span>
+    </footer>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

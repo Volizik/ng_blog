@@ -27,7 +27,7 @@ export class AdminComponent implements OnInit {
       title: this.title,
       desc: this.desc
     };
-    this.dataService.addPost(this.post)
+    this.dataService.addPost(this.post);
   }
 
 }

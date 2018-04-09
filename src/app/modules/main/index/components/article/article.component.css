@@ -14,12 +14,14 @@ mat-card {
     height: 210px;
     width: 100%;
     object-fit: cover;
+    flex-shrink: 0;
 }
 .wrap {
     display: flex;
     flex-direction: column;
     padding: 20px 30px;
     box-sizing: border-box;
+    flex-grow: 1;
 }
 .title {
     margin-top: 0;
